@@ -1,6 +1,7 @@
 .workbuddy/
 .DS_Store
 Thumbs.db
+.acl-recovery/
 
 # 内部设计稿，不随技能发布
 DESIGN.MD

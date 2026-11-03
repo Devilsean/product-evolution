@@ -2,6 +2,8 @@
 
 每次调用产品进化能力时，进入和离开都要走这里。目的是：**不重复分析、不重复提案、不丢结论**。
 
+记号约定：K1/K2/K3 是知识层（技能 / 项目 / 现场），A1/A2/A3 是授权级（直接做 / 先提案 / 只提案）。旧文档里的 L1/L2/L3 按含义分别读作 K 或 A。
+
 ---
 
 ## 一、进入：S0 读档案（3 分钟内完成）
@@ -60,9 +62,9 @@ ls -1 product-evolution/ 2>/dev/null
 
 只写这次真正发生变化的内容，不整篇重写。分层规则见 `09-knowledge-boundaries.md`。
 
-### 第一步：写 session（L3，必做）
+### 第一步：写 session（K3，必做）
 
-新建 `product-evolution/sessions/<YYYY-MM-DD-HHmm>/session-log.md`，按 `templates/session-log.md` 填。**这一轮的所有观察、推断、假设、待决策提案先全部落在这里**，不直接写进 L2。
+新建 `product-evolution/sessions/<YYYY-MM-DD-HHmm>/session-log.md`，按 `templates/session-log.md` 填。**这一轮的所有观察、推断、假设、待决策提案先全部落在这里**，不直接写进 K2。
 
 当前环境无写权限（Ask 模式 / 只读）时：把 session 内容作为回复的末节交付（标题"本轮现场（未落盘）"），并声明"下一轮开始时请先把这段内容补存到 sessions/"。声明未落盘不算违规，假装落盘才算。
 
@@ -70,7 +72,7 @@ ls -1 product-evolution/ 2>/dev/null
 
 只做了分析、没有实施的轮次，归档到此结束（第 2、3 步做空跑检查即可）。
 
-### 第二步：晋升到 L2（够格的才搬）
+### 第二步：晋升到 K2（够格的才搬）
 
 | 文件 | 什么条件下写 | 写什么 |
 |---|---|---|
@@ -78,11 +80,11 @@ ls -1 product-evolution/ 2>/dev/null
 | `ITERATION_LOG.md` | 做过实施 | 按 `templates/iteration-report.md` 追加一轮 |
 | `PRODUCT_PROFILE.md` | 定位、用户、能力、验证能力**真的**变了 | 只改对应字段 + 更新日期 |
 | `PRODUCT_PRINCIPLES.md` | 用户明确确认了某条原则 | 必须写"用户确认于 YYYY-MM-DD"，未确认的不写 |
-| `OPPORTUNITY_BACKLOG.md` | 有新假设，或有旧假设被关闭 | 新增/标 closed + 理由 |
+| `OPPORTUNITY_BACKLOG.md` | 有新假设，或有旧假设被关闭 | 新增 / 标 closed + 理由 |
 
 搬走的内容，在 session 的归档表里标 `已晋升 → 文件名`；没搬的标 `未晋升 + 缺什么`，下一轮据此判断能否重提。
 
-### 第三步：登记方法候选（L1，谨慎）
+### 第三步：登记方法候选（K1，谨慎）
 
 只有"可能通用"的经验才写，写进 `references/method-ledger.md` 的候选区：抽象表述 + 来源代号 + 缺口。**不得**因为"这次很有用"就改 SKILL.md 或 workflow 正文——那要过四道闸。
 
@@ -129,7 +131,7 @@ mkdir -p product-evolution/sessions/$(date +%Y-%m-%d-%H%M)
 离开侧：
 
 - [ ] 本轮已写 `sessions/<时间>/session-log.md`
-- [ ] 够格的内容已晋升到 L2，session 归档表里每条都有去向
+- [ ] 够格的内容已晋升到 K2，session 归档表里每条都有去向
 - [ ] 待用户回复的提案没有写进 DECISION_LOG
 - [ ] 可能通用的经验已进 method-ledger 候选区（或判定为不通用）
 - [ ] 遗留问题只有一个，且具体到能开工
@@ -142,3 +144,4 @@ mkdir -p product-evolution/sessions/$(date +%Y-%m-%d-%H%M)
 - **写猜测**：把"我觉得用户可能想要"写进 PROFILE 的定位字段 → 后续所有判断被污染。
 - **写成就**：ITERATION_LOG 只写"已完成优化"，不写证据 → 下一轮无法判断是否真的改善了。
 - **不写拒绝**：只看采纳记录，导致同一方案被反复提出。
+</content>

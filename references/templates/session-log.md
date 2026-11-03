@@ -1,8 +1,9 @@
-# Session Log（L3 会话上下文）
+# Session Log（K3 会话上下文）
 
 > 本文件属于**当前轮次**，不是项目知识。路径：
 > `<项目根>/product-evolution/sessions/<YYYY-MM-DD-HHmm>/session-log.md`
 > 轮次结束后按 `workflows/09-knowledge-boundaries.md` 第八节归档；未晋升的内容不得被下一轮当作事实。
+> 记号：K3 = 会话层；A1/A2/A3 = 授权级（旧记号 L1/L2/L3 已弃用，见 SKILL.md 的记号表）。
 
 - 项目：
 - 时间 / 模式：完整 / 专项 / 方向探索
@@ -31,22 +32,22 @@
 
 ## 四、待决策提案（等用户回复，**不得写入 DECISION_LOG**）
 
-| # | 提案 | 权限 | 需要用户决定什么 |
+| # | 提案 | 授权级 | 需要用户决定什么 |
 |---|---|---|---|
-| 1 |  | L1/L2/L3 |  |
+| 1 |  | A1 / A2 / A3 |  |
 
 ## 五、分类归档表（每条都归一次，不许悬空）
 
 | 内容 | 应落层 | 去向文件 | 状态 |
 |---|---|---|---|
-|  | L2 | DECISION_LOG / PROFILE / BACKLOG / ITERATION_LOG | `confirmed` / `candidate` / 未晋升（缺什么） |
-|  | L3 | 留在本文件 | `candidate` |
+|  | K2 | DECISION_LOG / PROFILE / BACKLOG / ITERATION_LOG | `confirmed` / `candidate` / 未晋升（缺什么） |
+|  | K3 | 留在本文件 | `candidate` |
 
 ## 六、未晋升的内容及原因
 
 （写清"缺什么条件才能晋升"，下一轮据此判断是否重提。）
 
-## 七、方法级候选（→ L1 候选区，不直接改 SKILL.md）
+## 七、方法级候选（→ K1 候选区，不直接改 SKILL.md）
 
 | 本条经验 | 抽象后表述 | 是否已写入 method-ledger | 还缺什么 |
 |---|---|---|---|
@@ -55,3 +56,4 @@
 ## 八、未验证声明
 
 本轮没有验证的内容、原因、何时可验证：
+</content>
